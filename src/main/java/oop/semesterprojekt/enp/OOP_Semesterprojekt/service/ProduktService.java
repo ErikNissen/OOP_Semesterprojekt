@@ -11,7 +11,7 @@ import oop.semesterprojekt.enp.OOP_Semesterprojekt.repository.ProduktRepository;
 public class ProduktService {
 
     @Autowired
-    ProduktRepository produktRepository; // <- Das ist eine Bean
+    ProduktRepository produktRepository;
 
     public List<Produkt> getAllProdukt() {
 
@@ -25,13 +25,14 @@ public class ProduktService {
         return produktRepository.findById(id).get();
     }
 
-    public Produkt saveOrUpdateProdukt(Produkt produkt) { // TO DO: In der Doku erläutern, dass sowohl Save als auch Update funktionieren
+    public Produkt saveOrUpdateProdukt(Produkt produkt) {
         return produktRepository.save(produkt);
     }
 
     public void delete(int id) {
         produktRepository.deleteById(id);
     }
+
     public Produkt getProduktByName(String name) {
         long i, j, k;
         Produkt produkt = null;
