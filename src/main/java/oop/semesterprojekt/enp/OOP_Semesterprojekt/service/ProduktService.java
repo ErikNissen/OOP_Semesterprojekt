@@ -32,24 +32,21 @@ public class ProduktService {
     public void delete(int id) {
         produktRepository.deleteById(id);
     }
-
-
-    /*
-    public static Produkt getProduktByName(String name) {
+    public Produkt getProduktByName(String name) {
         long i, j, k;
         Produkt produkt = null;
-        j = repo_te.count();
+        j = produktRepository.count();
         for(i = 0; i <= j; i++) {
             for(k = j; k >= 0; k--) {
                 if(k == i) {
                     break;
                 }
-                if(repo_tl.findById((int) i).get().getProdukt_Name().contains(name)) {
-                    produkt = repo_tl.findById((int) i).get();
+                if(produktRepository.findById((int) i).get().getBezeichnung().contains(name)) {
+                    produkt = produktRepository.findById((int) i).get();
                     break;
                 }else {
-                    if(repo_te.findById((int) k).get().getProdukt_Name().contains(name)) {
-                        produkt = repo_tl.findById((int) k).get();
+                    if(produktRepository.findById((int) i).get().getBezeichnung().contains(name)) {
+                        produkt = produktRepository.findById((int) k).get();
                         break;
                     }
                     continue;
@@ -62,5 +59,4 @@ public class ProduktService {
         }
         return produkt;
     }
-     */
 }
