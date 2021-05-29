@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Alle Produkte</title>
+</head>
+<body>
+<a href="/">Startseite</a>
+<p></p>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Bezeichnung</th>
+        <th>Preis</th>
+        <th>Gewicht</th>
+        <th>Hersteller</th>
+        <th>Fertigungs Tag</th>
+        <th>Lagerungs Temperatur</th>
+    </tr>
+    <tr th:each="produkt : ${produkt}">
+        <th th:text="${produkt.id}">123</th>
+        <th th:text="${produkt.bezeichnung}">abc</th>
+        <th th:text="${produkt.preis}">1.337</th>
+        <th th:text="${produkt.gewicht}">69.69</th>
+        <th th:text="${produkt.hersteller}">Ich AG</th>
+        <th th:text="${produkt.fertigungsTag}">2021-05-25T00:00:00.000+00:00</th>
+        <th th:text="${produkt.lagerungsTemperatur}">42.42</th>
+    </tr>
+</table>
+</body>
+</html>
