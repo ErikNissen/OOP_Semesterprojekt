@@ -47,7 +47,7 @@ public class Objektdatenbank {
         System.out.println();
         System.out.println("### READ: Es wird ein generisches Produkt ausgelesen");
         System.out.println("...");
-        System.out.println(restTemplate.getForObject("http://localhost:8080/produkt/33", String.class));
+        System.out.println(restTemplate.getForObject("http://localhost:8080/produkt/1", String.class));
         System.out.println("Ein Produkt wurde erfolgreich ausgelesen");
 
     }
@@ -57,7 +57,7 @@ public class Objektdatenbank {
 
         RestTemplate restTemplate = new RestTemplate();
         final String url = "http://localhost:8080/produkt";
-        final String requestJsonUpdateProduct = "{\"id\":\"33\", \"bezeichnung\":\"aktualisiertes Testprodukt\", \"preis\":\"123.456\", \"gewicht\":\"789.101\", \"hersteller\":\"OOP\", \"fertigungsTag\":\"2021-05-29\", \"lagerungsTemperatur\":\"20.21\" }";
+        final String requestJsonUpdateProduct = "{\"id\":\"1\", \"bezeichnung\":\"aktualisiertes Testprodukt\", \"preis\":\"123.456\", \"gewicht\":\"789.101\", \"hersteller\":\"OOP\", \"fertigungsTag\":\"2021-05-29\", \"lagerungsTemperatur\":\"20.21\" }";
         HttpHeaders headers = new org.springframework.http.HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
 
@@ -67,7 +67,7 @@ public class Objektdatenbank {
         System.out.println();
         System.out.println("### UPDATE: Die Bezeichnung des Produkts wird aktualisiert. Das aktualisierte Produkt wird ausgegeben.");
         System.out.println("...");
-        System.out.println(restTemplate.getForObject("http://localhost:8080/produkt/33", String.class));
+        System.out.println(restTemplate.getForObject("http://localhost:8080/produkt/1", String.class));
         System.out.println("Das Produkt wurde erfolgreich aktualisiert.");
 
     }
