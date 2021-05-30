@@ -2,11 +2,9 @@ package oop.semesterprojekt.enp.OOP_Semesterprojekt.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 import java.util.Date;
 
 @Entity
-@Table
 public class Lebensmittelprodukt extends Produkt {
 
     @Column
