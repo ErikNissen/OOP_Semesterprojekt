@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.thymeleaf.org ">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Alle Produkte</title>
@@ -19,7 +18,7 @@
         <th>Fertigungs Tag</th>
         <th>Lagerungs Temperatur</th>
     </tr>
-    <tr th:each="produkt : ${produkt}">
+    <tr th:each="produkt : ${alleProdukte}">
         <th th:text="${produkt.id}"></th>
         <th th:text="${produkt.bezeichnung}"></th>
         <th th:text="${produkt.preis}"></th>
