@@ -8,9 +8,6 @@ import oop.semesterprojekt.enp.OOP_Semesterprojekt.model.Produkt;
 import oop.semesterprojekt.enp.OOP_Semesterprojekt.service.ProduktService;
 import org.springframework.web.servlet.ModelAndView;
 
-/**
- * Jede Schnittstelle verfügt über einen eigene Controller
- */
 @RestController
 public class ProduktController {
 
@@ -26,7 +23,7 @@ public class ProduktController {
     private int saveProdukt(@RequestBody Produkt produkt) {
 
         return produktService.saveOrUpdateProdukt(produkt).getId();
-        //Ab hier regelt die DB-Engine die Vergabe der ID
+
     }
 
     /**
@@ -34,18 +31,9 @@ public class ProduktController {
      * @return zeigt alle Einträge
      */
     @GetMapping("/produkt")
-    public ModelAndView gettAllProdukt() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("produkt", produktService.getAllProdukt());
-        return modelAndView;
-    }
-
-    /*
-    @GetMapping("/produkt")
     private List<Produkt> gettAllProdukt() {
         return produktService.getAllProdukt();
     }
-     */
 
     /**
      *

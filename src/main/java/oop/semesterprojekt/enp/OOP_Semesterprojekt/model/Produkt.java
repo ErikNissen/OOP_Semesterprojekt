@@ -1,5 +1,7 @@
 package oop.semesterprojekt.enp.OOP_Semesterprojekt.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -27,6 +29,7 @@ public class Produkt {
     @Column
     private String hersteller;
 
+    @DateTimeFormat(pattern="yyy-MM-dd")
     @Column
     private Date fertigungsTag;
 

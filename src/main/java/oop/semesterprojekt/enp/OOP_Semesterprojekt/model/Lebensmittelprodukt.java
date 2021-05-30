@@ -1,5 +1,7 @@
 package oop.semesterprojekt.enp.OOP_Semesterprojekt.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import java.util.Date;
@@ -7,6 +9,7 @@ import java.util.Date;
 @Entity
 public class Lebensmittelprodukt extends Produkt {
 
+    @DateTimeFormat(pattern="yyy-MM-dd")
     @Column
     private Date mindeshaltbarkeitsdatum;
 
