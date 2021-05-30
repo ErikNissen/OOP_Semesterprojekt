@@ -47,13 +47,13 @@ public class Anwendung {
 		objektdatenbank.aktualisiereElektronikprodukt();
 
 		// DELETE Produkt
-		objektdatenbank.loescheProdukt();
+		// objektdatenbank.loescheProdukt();
 
 		// DELETE Lebensmittelprodukt
-		objektdatenbank.loescheLebensmittelprodukt();
+		// objektdatenbank.loescheLebensmittelprodukt();
 
 		// DELETE Elektronikprodukt
-		objektdatenbank.loescheElektronikprodukt();
+		// objektdatenbank.loescheElektronikprodukt();
 
 		objektdatenbank.liesAlleObjekte();
 	}
