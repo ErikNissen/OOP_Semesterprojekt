@@ -1,11 +1,11 @@
 package oop.semesterprojekt.enp.OOP_Semesterprojekt.model;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 import java.util.Date;
 
-@Table
 @Entity
 public class Elektronikprodukt extends Produkt {
 
@@ -21,6 +21,7 @@ public class Elektronikprodukt extends Produkt {
     @Column
     private String anschlussart;
 
+    @DateTimeFormat(pattern="yyy-MM-dd")
     @Column
     private Date garantieZeit;
 

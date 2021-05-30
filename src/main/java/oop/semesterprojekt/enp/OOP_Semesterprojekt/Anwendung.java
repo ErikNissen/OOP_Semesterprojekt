@@ -20,16 +20,40 @@ public class Anwendung {
 		objektdatenbank.willkommen();
 
 		// CREATE Produkt
-		objektdatenbank.erstelleObjekt();
+		objektdatenbank.erstelleProdukt("http://localhost:8080/produkt");
+
+		// CREATE Lebensmittelprodukt
+		objektdatenbank.erstelleLebensmittelprodukt("http://localhost:8080/lebensmittel");
+
+		// CREATE Elektronikprodukt
+		objektdatenbank.erstelleElektronikprodukt("http://localhost:8080/elektronik");
 
 		// READ Produkt
-		objektdatenbank.liesObjekt();
+		objektdatenbank.liesProdukt();
+
+		// READ Lebensmittelprodukt
+		objektdatenbank.liesLebensmittelprodukt();
+
+		// READ Elektronikprodukt
+		objektdatenbank.liesElektronikprodukt();
 
 		// UPDATE Produkt
-		objektdatenbank.aktualisiereObjekt();
+		objektdatenbank.aktualisiereProdukt();
+
+		// UPDATE Lebensmittelprodukt
+		objektdatenbank.aktualisiereLebensmittelprodukt();
+
+		// UPDATE Elektronikprodukt
+		objektdatenbank.aktualisiereElektronikprodukt();
 
 		// DELETE Produkt
-		//objektdatenbank.loescheObjekt();
+		// objektdatenbank.loescheProdukt();
+
+		// DELETE Lebensmittelprodukt
+		// objektdatenbank.loescheLebensmittelprodukt();
+
+		// DELETE Elektronikprodukt
+		// objektdatenbank.loescheElektronikprodukt();
 
 		objektdatenbank.liesAlleObjekte();
 	}

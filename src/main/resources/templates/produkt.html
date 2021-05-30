@@ -5,9 +5,11 @@
     <title>Alle Produkte</title>
 </head>
 <body>
-<a href="/">Startseite</a>
+<a href="/">Dokumentation</a>
 <p></p>
 <table> <!-- TEST! -->
+<p>Alle Produkte</p>
+<table>
     <tr>
         <th>ID</th>
         <th>Bezeichnung</th>
@@ -17,14 +19,88 @@
         <th>Fertigungs Tag</th>
         <th>Lagerungs Temperatur</th>
     </tr>
-    <tr th:each="produkt : ${produkt}">
-        <th th:text="${produkt.id}">123</th>
-        <th th:text="${produkt.bezeichnung}">abc</th>
-        <th th:text="${produkt.preis}">1.337</th>
-        <th th:text="${produkt.gewicht}">69.69</th>
-        <th th:text="${produkt.hersteller}">Ich AG</th>
-        <th th:text="${produkt.fertigungsTag}">2021-05-25T00:00:00.000+00:00</th>
-        <th th:text="${produkt.lagerungsTemperatur}">42.42</th>
+    <tr th:each="produkt : ${alleProdukte}">
+        <th th:text="${produkt.id}"></th>
+        <th th:text="${produkt.bezeichnung}"></th>
+        <th th:text="${produkt.preis}"></th>
+        <th th:text="${produkt.gewicht}"></th>
+        <th th:text="${produkt.hersteller}"></th>
+        <th th:text="${produkt.fertigungsTag}"></th>
+        <th th:text="${produkt.lagerungsTemperatur}"></th>
+    </tr>
+</table>
+<p>Alle Lebensmittelprodukte</p>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Bezeichnung</th>
+        <th>Preis</th>
+        <th>Gewicht</th>
+        <th>Hersteller</th>
+        <th>Fertigungs Tag</th>
+        <th>Lagerungs Temperatur</th>
+        <th>mindesthaltbarkeitsdatum</th>
+        <th>vegan</th>
+        <th>vegetarisch</th>
+        <th>tierisch</th>
+        <th>glutenfrei</th>
+        <th>laktosefrei</th>
+        <th>zuckerfrei</th>
+        <th>inhaltsstoffe</th>
+    </tr>
+    <tr th:each="lebensmittelprodukt : ${lebensmittelprodukt}">
+        <th th:text="${lebensmittelprodukt.id}"></th>
+        <th th:text="${lebensmittelprodukt.bezeichnung}"></th>
+        <th th:text="${lebensmittelprodukt.preis}"></th>
+        <th th:text="${lebensmittelprodukt.gewicht}"></th>
+        <th th:text="${lebensmittelprodukt.hersteller}"></th>
+        <th th:text="${lebensmittelprodukt.fertigungsTag}"></th>
+        <th th:text="${lebensmittelprodukt.lagerungsTemperatur}"></th>
+        <th th:text="${lebensmittelprodukt.mindesthaltbarkeitsdatum}"></th>
+        <th th:text="${lebensmittelprodukt.vegan}"></th>
+        <th th:text="${lebensmittelprodukt.vegetarisch}"></th>
+        <th th:text="${lebensmittelprodukt.tierisch}"></th>
+        <th th:text="${lebensmittelprodukt.glutenfrei}"></th>
+        <th th:text="${lebensmittelprodukt.laktosefrei}"></th>
+        <th th:text="${lebensmittelprodukt.zuckerfrei}"></th>
+        <th th:text="${lebensmittelprodukt.inhaltsstoffe}"></th>
+    </tr>
+</table>
+<p>Alle Elektronikprodukte</p>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Bezeichnung</th>
+        <th>Preis</th>
+        <th>Gewicht</th>
+        <th>Hersteller</th>
+        <th>Fertigungs Tag</th>
+        <th>Lagerungs Temperatur</th>
+        <th>schutzklasse</th>
+        <th>stromverbrauch</th>
+        <th>leistung</th>
+        <th>anschlussart</th>
+        <th>garantieZeit</th>
+        <th>hatSchalter</th>
+        <th>netzwerkfaehig</th>
+        <th>anzahlSignalleuchten</th>
+    </tr>
+    <tr th:each="elektronikprodukt : ${elektronikprodukt}">
+        <th th:text="${elektronikprodukt.id}"></th>
+        <th th:text="${elektronikprodukt.bezeichnung}"></th>
+        <th th:text="${elektronikprodukt.preis}"></th>
+        <th th:text="${elektronikprodukt.gewicht}"></th>
+        <th th:text="${elektronikprodukt.hersteller}"></th>
+        <th th:text="${elektronikprodukt.fertigungsTag}"></th>
+        <th th:text="${elektronikprodukt.lagerungsTemperatur}"></th>
+        <th th:text="${elektronikprodukt.schutzklasse}"></th>
+        <th th:text="${elektronikprodukt.stromverbrauch}"></th>
+        <th th:text="${elektronikprodukt.leistung}"></th>
+        <th th:text="${elektronikprodukt.anschlussart}"></th>
+        <th th:text="${elektronikprodukt.garantieZeit}"></th>
+        <th th:text="${elektronikprodukt.hatSchalter}"></th>
+        <th th:text="${elektronikprodukt.netzwerkfaehig}"></th>
+        <th th:text="${elektronikprodukt.anzahlSignalleuchten}"></th>
     </tr>
 </table>
 </body>
