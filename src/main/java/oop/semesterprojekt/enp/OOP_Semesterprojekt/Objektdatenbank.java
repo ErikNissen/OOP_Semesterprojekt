@@ -55,8 +55,6 @@ public class Objektdatenbank {
         final String response = restTemplate.postForObject(url, entity, String.class);
         System.out.println("Ein Produkt wurde erfolgreich angelegt");
 
-        System.out.println(response);
-
         return response;
     }
 
@@ -127,11 +125,8 @@ public class Objektdatenbank {
     }
 
     // READ Produkt
-
     /**
-     *
      * @param produktId Entgegengenommen wird eine Produkt-ID, um damit vollständig die REST-Schnittstelle aufzurufen
-     *                  Der REST-Call erfolgt in Zeile 143
      */
     public void liesProdukt(String produktId) {
 
@@ -172,11 +167,8 @@ public class Objektdatenbank {
     }
 
     // UPDATE Produkt
-
     /**
-     *
      * @param produktId Entgegengenommen wird eine Produkt-ID, um damit einen vollständigen REST-Call durchzuführen
-     *                  Aufruf der REST-Schnittstelle erfolgt in Zeile 201
      */
     public void aktualisiereProdukt(String produktId) {
 
@@ -274,11 +266,8 @@ public class Objektdatenbank {
     }
 
     // DELETE Produkt
-
     /**
-     *
      * @param produktId Entgegengenommen wird eine Produkt-ID, um damit vollständig einen REST-Call durchzuführen
-     *                  Aufruf der REST-Schnittstelle erfolgt in Zeile 290
      */
     public void loescheProdukt(String produktId) {
 
