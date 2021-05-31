@@ -34,11 +34,8 @@ public class Elektronikprodukt extends Produkt {
     @Column
     private int anzahlSignalleuchten;
 
-    /**
-     *
-     * @return
-     */
     public String getSchutzklasse() {
+
         return schutzklasse;
     }
 
@@ -47,14 +44,12 @@ public class Elektronikprodukt extends Produkt {
      * @param schutzklasse
      */
     public void setSchutzklasse(String schutzklasse) {
+
         this.schutzklasse = schutzklasse;
     }
 
-    /**
-     *
-     * @return
-     */
     public double getStromverbrauch() {
+
         return stromverbrauch;
     }
 
@@ -63,14 +58,12 @@ public class Elektronikprodukt extends Produkt {
      * @param stromverbrauch
      */
     public void setStromverbrauch(double stromverbrauch) {
+
         this.stromverbrauch = stromverbrauch;
     }
 
-    /**
-     *
-     * @return
-     */
     public double getLeistung() {
+
         return leistung;
     }
 
@@ -79,14 +72,12 @@ public class Elektronikprodukt extends Produkt {
      * @param leistung
      */
     public void setLeistung(double leistung) {
+
         this.leistung = leistung;
     }
 
-    /**
-     *
-     * @return
-     */
     public String getAnschlussart() {
+
         return anschlussart;
     }
 
@@ -95,14 +86,12 @@ public class Elektronikprodukt extends Produkt {
      * @param anschlussart
      */
     public void setAnschlussart(String anschlussart) {
+
         this.anschlussart = anschlussart;
     }
 
-    /**
-     *
-     * @return
-     */
     public Date getGarantieZeit() {
+
         return garantieZeit;
     }
 
@@ -111,14 +100,12 @@ public class Elektronikprodukt extends Produkt {
      * @param garantieZeit
      */
     public void setGarantieZeit(Date garantieZeit) {
+
         this.garantieZeit = garantieZeit;
     }
 
-    /**
-     *
-     * @return
-     */
     public boolean isHatSchalter() {
+
         return hatSchalter;
     }
 
@@ -127,14 +114,12 @@ public class Elektronikprodukt extends Produkt {
      * @param hatSchalter
      */
     public void setHatSchalter(boolean hatSchalter) {
+
         this.hatSchalter = hatSchalter;
     }
 
-    /**
-     *
-     * @return
-     */
     public boolean isNetzwerkfaehig() {
+
         return netzwerkfaehig;
     }
 
@@ -143,14 +128,12 @@ public class Elektronikprodukt extends Produkt {
      * @param netzwerkfaehig
      */
     public void setNetzwerkfaehig(boolean netzwerkfaehig) {
+
         this.netzwerkfaehig = netzwerkfaehig;
     }
 
-    /**
-     *
-     * @return
-     */
     public int getAnzahlSignalleuchten() {
+
         return anzahlSignalleuchten;
     }
 
@@ -159,6 +142,7 @@ public class Elektronikprodukt extends Produkt {
      * @param anzahlSignalleuchten
      */
     public void setAnzahlSignalleuchten(int anzahlSignalleuchten) {
+
         this.anzahlSignalleuchten = anzahlSignalleuchten;
     }
 }

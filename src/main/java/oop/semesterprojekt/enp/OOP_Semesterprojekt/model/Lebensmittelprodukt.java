@@ -34,11 +34,8 @@ public class Lebensmittelprodukt extends Produkt {
     @Column
     private String[] inhaltsstoffe;
 
-    /**
-     *
-     * @return
-     */
     public Date getMindeshaltbarkeitsdatum() {
+
         return mindeshaltbarkeitsdatum;
     }
 
@@ -47,14 +44,12 @@ public class Lebensmittelprodukt extends Produkt {
      * @param mindeshaltbarkeitsdatum
      */
     public void setMindeshaltbarkeitsdatum(Date mindeshaltbarkeitsdatum) {
+
         this.mindeshaltbarkeitsdatum = mindeshaltbarkeitsdatum;
     }
 
-    /**
-     *
-     * @return
-     */
     public boolean isVegan() {
+
         return vegan;
     }
 
@@ -63,14 +58,12 @@ public class Lebensmittelprodukt extends Produkt {
      * @param vegan
      */
     public void setVegan(boolean vegan) {
+
         this.vegan = vegan;
     }
 
-    /**
-     *
-     * @return
-     */
     public boolean isVegetarisch() {
+
         return vegetarisch;
     }
 
@@ -79,14 +72,12 @@ public class Lebensmittelprodukt extends Produkt {
      * @param vegetarisch
      */
     public void setVegetarisch(boolean vegetarisch) {
+
         this.vegetarisch = vegetarisch;
     }
 
-    /**
-     *
-     * @return
-     */
     public boolean isTierisch() {
+
         return tierisch;
     }
 
@@ -95,14 +86,12 @@ public class Lebensmittelprodukt extends Produkt {
      * @param tierisch
      */
     public void setTierisch(boolean tierisch) {
+
         this.tierisch = tierisch;
     }
 
-    /**
-     *
-     * @return
-     */
     public boolean isGlutenfrei() {
+
         return glutenfrei;
     }
 
@@ -111,14 +100,12 @@ public class Lebensmittelprodukt extends Produkt {
      * @param glutenfrei
      */
     public void setGlutenfrei(boolean glutenfrei) {
+
         this.glutenfrei = glutenfrei;
     }
 
-    /**
-     *
-     * @return
-     */
     public boolean isLaktosefrei() {
+
         return laktosefrei;
     }
 
@@ -127,14 +114,12 @@ public class Lebensmittelprodukt extends Produkt {
      * @param laktosefrei
      */
     public void setLaktosefrei(boolean laktosefrei) {
+
         this.laktosefrei = laktosefrei;
     }
 
-    /**
-     *
-     * @return
-     */
     public boolean isZuckerfrei() {
+
         return zuckerfrei;
     }
 
@@ -143,14 +128,12 @@ public class Lebensmittelprodukt extends Produkt {
      * @param zuckerfrei
      */
     public void setZuckerfrei(boolean zuckerfrei) {
+
         this.zuckerfrei = zuckerfrei;
     }
 
-    /**
-     *
-     * @return
-     */
     public String[] getInhaltsstoffe() {
+
         return inhaltsstoffe;
     }
 
@@ -159,6 +142,7 @@ public class Lebensmittelprodukt extends Produkt {
      * @param inhaltsstoffe
      */
     public void setInhaltsstoffe(String[] inhaltsstoffe) {
+
         this.inhaltsstoffe = inhaltsstoffe;
     }
 

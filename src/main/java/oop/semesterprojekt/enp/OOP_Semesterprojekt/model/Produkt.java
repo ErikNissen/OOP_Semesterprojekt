@@ -5,16 +5,25 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.util.Date;
 
-/** Generelle Oberklasse Produkt.
- * @authors Erik, Nico und Pascal
+/**
+ * Die generelle Oberklasse enthält ausschließlich Attribute, Getter und Setter. Die daraus abgeleiteten Klassen sind
+ * nach demselben Schema aufgebaut und werden deswegen nicht näher dokumentiert.<br><br>
+ *
+ * Die generelle Oberklasse ist auf Wunsch unserer Kunden nicht abstract. Viele Unternehmen betreiben sogenannte
+ * "Innovation Hubs" und haben ausdrücklich den Wunsch geäußert, generische Produkte in der Tabelle anlegen zu können, um
+ * dann immer noch entscheiden zu können, ob das in Zukunft ein Elektronikartikel wird oder etwas zu essen.<br><br>
+ *
+ * Außerdem erfolgt in den Klassen über JPA-Annotationen und Hibernate ein Mapping in eine Datenbank.
+ * Die JPA-Annotationen werden bei der jeweils ersten Verwendung kommentiert, in den
+ * Subklassen Elektronikprodukt und Lebensmittelprodukt dann als gegeben betrachtet.
  */
-@Entity
-@Table
+@Entity // Definiert die Klasse als JPA-Entitäts-Klasse. Dadurch kann die Klasse z.B. via Hibernate zu einer Datenbank gemapped werden
+@Table( name = "Produkt") // optionale Annotation. Der Tabellenname wird dem Entitäts-Klassen-Namen entnommen
 public class Produkt {
 
-    @Id
-    @GeneratedValue
-    @Column
+    @Id // nach Entity die zweite Pflicht-Annotation. Die Id-Annotation spezifiziert den Primärschlüssel der Entität
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // optionale Annotation. Spezifiziert wie Werte für den Primärschlüssel generiert werden. Es gibt vier "id-generation-strategies"
+    @Column( unique = true) // optionale Annotation. Hier erfolgt das Mapping zwischen einem Attribut einer Entität und einer Datenbank-Tabellen-Spalte. Es können Einstellungen wie name, length, nullable und unique vorgenommen werden
     private int id;
 
     @Column
@@ -29,18 +38,15 @@ public class Produkt {
     @Column
     private String hersteller;
 
-    @DateTimeFormat(pattern="yyy-MM-dd")
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     @Column
     private Date fertigungsTag;
 
     @Column
     private double lagerungsTemperatur;
 
-    /**
-     *
-     * @return Produkt-ID
-     */
     public int getId() {
+
         return id;
     }
 
@@ -50,104 +56,109 @@ public class Produkt {
      *           Sollte eine eindeutige, positive Ganzzahl sein
      */
     public void setId(int id) {
-        this.id = id;
+
+        if( id > 0 ) {
+            this.id = id;
+        } else {
+            System.err.println("FEHLER: ID darf nicht kleiner oder gleich 0 sein.");
+        }
     }
 
-    /**
-     *
-     * @return
-     */
     public String getBezeichnung() {
+
         return bezeichnung;
     }
 
     /**
      *
-     * @param bezeichnung
+     * @param bezeichnung Bezeichnung. Sollte nur aus alphanumerischen Werten bestehen.
      */
     public void setBezeichnung(String bezeichnung) {
+
         this.bezeichnung = bezeichnung;
     }
 
-
-    /**
-     *
-     * @return
-     */
     public double getPreis() {
+
         return preis;
     }
 
     /**
      *
-     * @param preis
+     * @param preis Preis. Sollte mindestens kostenlos sein (ergo: eine Fließkommazahl größer oder gleich 0.0)
      */
     public void setPreis(double preis) {
-        this.preis = preis;
+
+        if( preis >= 0.0 ) {
+
+            this.preis = preis;
+        } else {
+            System.err.println("FEHLER: Der Preis darf nicht weniger als kostenlos sein.");
+        }
     }
 
-    /**
-     *
-     * @return
-     */
     public double getGewicht() {
+
         return gewicht;
     }
 
     /**
      *
-     * @param gewicht
+     * @param gewicht Gewicht. Sollte eine positive Fließkommazahl sein
      */
     public void setGewicht(double gewicht) {
-        this.gewicht = gewicht;
+
+        if( gewicht > 0.0 ) {
+
+            this.gewicht = gewicht;
+        } else {
+            System.err.println("FEHLER: Das Gewicht darf nicht weniger als 0.0 sein");
+        }
     }
 
-    /**
-     *
-     * @return
-     */
     public String getHersteller() {
+
         return hersteller;
     }
 
     /**
      *
-     * @param hersteller
+     * @param hersteller Hersteller. Sollte nur aus alphanumerischen Werten bestehen
      */
     public void setHersteller(String hersteller) {
+
         this.hersteller = hersteller;
     }
 
-    /**
-     *
-     * @return
-     */
     public Date getFertigungsTag() {
+
         return fertigungsTag;
     }
 
     /**
      *
-     * @param fertigungsTag
+     * @param fertigungsTag Fertigungstag. Format: YYYY-MM-DD
      */
     public void setFertigungsTag(Date fertigungsTag) {
+
         this.fertigungsTag = fertigungsTag;
     }
 
-    /**
-     *
-     * @return
-     */
     public double getLagerungsTemperatur() {
+
         return lagerungsTemperatur;
     }
 
     /**
      *
-     * @param lagerungsTemperatur
+     * @param lagerungsTemperatur Lagerungstemperatur. Darf sowohl positive als auch negative Werte im Rahmen des physikalisch möglichen annehmen
      */
     public void setLagerungsTemperatur(double lagerungsTemperatur) {
 
-        this.lagerungsTemperatur = lagerungsTemperatur;
+        if( ( lagerungsTemperatur >= -273.15 ) && ( lagerungsTemperatur <= 4000000000000.0) ) {
+            this.lagerungsTemperatur = lagerungsTemperatur;
+        } else {
+            System.err.println("FEHLER: Der absolute Nullpunkt liegt bei -273.15 Grad Celsius. Die jemals höchste von Wissenschaftlern erzeugte Temperatur liegt bei vier Billionen Grad Celsius.");
+        }
     }
 }
