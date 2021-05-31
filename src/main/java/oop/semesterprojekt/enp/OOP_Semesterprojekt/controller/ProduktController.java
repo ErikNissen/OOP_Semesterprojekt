@@ -2,11 +2,9 @@ package oop.semesterprojekt.enp.OOP_Semesterprojekt.controller;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import oop.semesterprojekt.enp.OOP_Semesterprojekt.model.Produkt;
 import oop.semesterprojekt.enp.OOP_Semesterprojekt.service.ProduktService;
-import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class ProduktController {
@@ -14,11 +12,7 @@ public class ProduktController {
     @Autowired
     ProduktService produktService;
 
-    /**
-     *
-     * @param produkt Es werden die statischen Eigenschaften aus dem POST-Request gespeichert
-     * @return Bei Erfolg wird die ID angezeigt, welche das angelegte Produkt bekommen hat
-     */
+    // CREATE or UPDATE
     @PostMapping("/produkt")
     private int saveProdukt(@RequestBody Produkt produkt) {
 
@@ -26,31 +20,28 @@ public class ProduktController {
 
     }
 
-    /**
-     *
-     * @return zeigt alle Einträge
-     */
+    // READ
     @GetMapping("/produkt")
-    private List<Produkt> gettAllProdukt() {
-        return produktService.getAllProdukt();
+    private List<Produkt> gettAllProdukt(@RequestParam(value = "bezeichnung", required = false) String bezeichnung) {
+
+        if(bezeichnung == null) {
+            return produktService.getAllProdukt();
+        } else {
+            return List.of(produktService.getProduktByName(bezeichnung));
+        }
     }
 
-    /**
-     *
-     * @param id Die ID des Produktes, das ausgegeben werden soll
-     * @return
-     */
+    // READ
     @GetMapping("/produkt/{id}")
     private Produkt getProdukt(@PathVariable("id") int id) {
+
         return produktService.getProduktById(id);
     }
 
-    /**
-     *
-     * @param id Die ID des zu löschenden Produktes. DELETE-Request in "Postman" auswählen
-     */
+    // DELETE
     @DeleteMapping("/produkt/{id}")
     private void deleteProdukt(@PathVariable("id") int id) {
+
         produktService.delete(id);
     }
 }

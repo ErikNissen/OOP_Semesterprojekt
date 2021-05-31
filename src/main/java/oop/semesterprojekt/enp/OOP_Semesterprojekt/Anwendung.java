@@ -20,40 +20,40 @@ public class Anwendung {
 		objektdatenbank.willkommen();
 
 		// CREATE Produkt
-		objektdatenbank.erstelleProdukt("http://localhost:8080/produkt");
+		final String produktId = objektdatenbank.erstelleProdukt("http://localhost:8080/produkt");
 
 		// CREATE Lebensmittelprodukt
-		objektdatenbank.erstelleLebensmittelprodukt("http://localhost:8080/lebensmittel");
+		final String lebensmittelproduktId = objektdatenbank.erstelleLebensmittelprodukt("http://localhost:8080/lebensmittel");
 
 		// CREATE Elektronikprodukt
-		objektdatenbank.erstelleElektronikprodukt("http://localhost:8080/elektronik");
+		final String elektronikproduktId = objektdatenbank.erstelleElektronikprodukt("http://localhost:8080/elektronik");
 
 		// READ Produkt
-		objektdatenbank.liesProdukt();
+		objektdatenbank.liesProdukt(produktId);
 
 		// READ Lebensmittelprodukt
-		objektdatenbank.liesLebensmittelprodukt();
+		objektdatenbank.liesLebensmittelprodukt(lebensmittelproduktId);
 
 		// READ Elektronikprodukt
-		objektdatenbank.liesElektronikprodukt();
+		objektdatenbank.liesElektronikprodukt(elektronikproduktId);
 
 		// UPDATE Produkt
-		objektdatenbank.aktualisiereProdukt();
+		objektdatenbank.aktualisiereProdukt(produktId);
 
 		// UPDATE Lebensmittelprodukt
-		objektdatenbank.aktualisiereLebensmittelprodukt();
+		objektdatenbank.aktualisiereLebensmittelprodukt(lebensmittelproduktId);
 
 		// UPDATE Elektronikprodukt
-		objektdatenbank.aktualisiereElektronikprodukt();
+		objektdatenbank.aktualisiereElektronikprodukt(elektronikproduktId);
 
 		// DELETE Produkt
-		// objektdatenbank.loescheProdukt();
+		objektdatenbank.loescheProdukt(produktId);
 
 		// DELETE Lebensmittelprodukt
-		// objektdatenbank.loescheLebensmittelprodukt();
+		objektdatenbank.loescheLebensmittelprodukt(lebensmittelproduktId);
 
 		// DELETE Elektronikprodukt
-		// objektdatenbank.loescheElektronikprodukt();
+		objektdatenbank.loescheElektronikprodukt(elektronikproduktId);
 
 		objektdatenbank.liesAlleObjekte();
 	}

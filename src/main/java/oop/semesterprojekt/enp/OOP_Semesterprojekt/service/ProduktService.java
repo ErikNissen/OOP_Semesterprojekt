@@ -13,6 +13,13 @@ public class ProduktService {
     @Autowired
     ProduktRepository produktRepository;
 
+    // CREATE or UPDATE
+    public Produkt saveOrUpdateProdukt(Produkt produkt) {
+
+        return produktRepository.save(produkt);
+    }
+
+    // READ: alle Produkte werden ausgegeben
     public List<Produkt> getAllProdukt() {
 
         List<Produkt> produkte = new ArrayList<Produkt>();
@@ -21,43 +28,22 @@ public class ProduktService {
         return produkte;
     }
 
+    // READ: ein Produkt wird ausgegeben; id einmalig
     public Produkt getProduktById(int id) {
+
         return produktRepository.findById(id).get();
     }
 
-    public Produkt saveOrUpdateProdukt(Produkt produkt) {
-        return produktRepository.save(produkt);
+    // READ: ein oder mehrere Produkte mit der gesuchten Bezeichnung werden ausgegeben
+    public Produkt getProduktByName(String name) {
+
+        return produktRepository.findByBezeichnung(name);
     }
 
+    // DELETE
     public void delete(int id) {
+
         produktRepository.deleteById(id);
     }
 
-    public Produkt getProduktByName(String name) {
-        long i, j, k;
-        Produkt produkt = null;
-        j = produktRepository.count();
-        for(i = 0; i <= j; i++) {
-            for(k = j; k >= 0; k--) {
-                if(k == i) {
-                    break;
-                }
-                if(produktRepository.findById((int) i).get().getBezeichnung().contains(name)) {
-                    produkt = produktRepository.findById((int) i).get();
-                    break;
-                }else {
-                    if(produktRepository.findById((int) i).get().getBezeichnung().contains(name)) {
-                        produkt = produktRepository.findById((int) k).get();
-                        break;
-                    }
-                    continue;
-                }
-            }
-        }
-        if(produkt == null) {
-            System.out.print("Produkt wurde nicht gefunden.");
-            return null;
-        }
-        return produkt;
-    }
 }

@@ -23,7 +23,7 @@ public class Webcontroller {
     @RequestMapping( value = "/produkt.html")
     public String alleProdukte(Model model) {
         List<Produkt> alleProdukte = produktService.getAllProdukt();
-        model.addAttribute("produkt.html", alleProdukte);
+        model.addAttribute("alleProdukte", alleProdukte);
         return "produkt.html";
     }
 }
