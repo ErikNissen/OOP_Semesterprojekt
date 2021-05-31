@@ -5,8 +5,16 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * Die Klasse "Objektdatenbank" kann in nutzende Systeme eingebunden werden. "Objektdatenbank" implementiert Methoden,
+ * um mittels REST-Api-Calls Daten zu speichern, zu aktualisieren, auszulesen und zu löschen.<br><br>
+ *
+ * Hinweis: Der Übersicht wegen werden nur Methoden kommentiert, die mit der Klasse Produkt in Zusammenhang stehen. Die
+ * CRUD-Operationen für die Klassen Lebensmittelprodukt und Elektronikprodukt funktionieren auf dieselbe Weise.
+ */
 public class Objektdatenbank {
 
+    // Methode willkommen() erzeugt Bildschirmausgaben im Terminal
     public void willkommen() {
 
         System.out.println();
@@ -18,6 +26,15 @@ public class Objektdatenbank {
     }
 
     // CREATE Produkt
+    /**
+     *
+     * @param url URL der REST-Schnittstelle
+     * @return In "response" steht die ID des angelegten Produkts.
+     *
+     * Wird verwendet in Anwendung.java
+     * Mit "final String produktId = objektdatenbank.erstelleProdukt("http://localhost:8080/produkt");" wird eine
+     * Produkt-ID gespeichert, um die über diese ID identifizierten Objekte auszulesen, zu aktualisieren oder zu löschen
+     */
     public String erstelleProdukt( final String url ) {
 
         RestTemplate restTemplate = new RestTemplate();
@@ -108,6 +125,9 @@ public class Objektdatenbank {
     }
 
     // READ Produkt
+    /**
+     * @param produktId Entgegengenommen wird eine Produkt-ID, um damit vollständig die REST-Schnittstelle aufzurufen
+     */
     public void liesProdukt(String produktId) {
 
         RestTemplate restTemplate = new RestTemplate();
@@ -147,6 +167,9 @@ public class Objektdatenbank {
     }
 
     // UPDATE Produkt
+    /**
+     * @param produktId Entgegengenommen wird eine Produkt-ID, um damit einen vollständigen REST-Call durchzuführen
+     */
     public void aktualisiereProdukt(String produktId) {
 
         RestTemplate restTemplate = new RestTemplate();
@@ -243,6 +266,9 @@ public class Objektdatenbank {
     }
 
     // DELETE Produkt
+    /**
+     * @param produktId Entgegengenommen wird eine Produkt-ID, um damit vollständig einen REST-Call durchzuführen
+     */
     public void loescheProdukt(String produktId) {
 
         RestTemplate restTemplate = new RestTemplate();
@@ -281,6 +307,7 @@ public class Objektdatenbank {
 
     }
 
+    // Es wird eine Ausgabe auf dem Bildschirm im Terminal-Fenster erzeugt
     public void liesAlleObjekte() {
 
         RestTemplate restTemplate = new RestTemplate();
