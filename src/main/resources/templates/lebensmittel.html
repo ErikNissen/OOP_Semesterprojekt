@@ -6,6 +6,11 @@
     <title>Lebensmittelprodukte</title>
 </head>
 <body>
+<nav>
+    <a href="/">Dokumentation</a>
+    <a href="produkt.html">Alle Produkte</a>
+    <a href="elektronik.html">Alle Elektronikprodukte</a>
+</nav><br><br>
 <table>
     <tr>
         <th>ID</th>
@@ -25,21 +30,21 @@
         <th>inhaltsstoffe</th>
     </tr>
     <tr th:each="lebensmittelprodukt : ${alleLebensmittel}">
-        <th th:text="${lebensmittelprodukt.id}"></th>
-        <th th:text="${lebensmittelprodukt.bezeichnung}"></th>
-        <th th:text="${lebensmittelprodukt.preis}"></th>
-        <th th:text="${lebensmittelprodukt.gewicht}"></th>
-        <th th:text="${lebensmittelprodukt.hersteller}"></th>
-        <th th:text="${lebensmittelprodukt.fertigungsTag}"></th>
-        <th th:text="${lebensmittelprodukt.lagerungsTemperatur}"></th>
-        <th th:text="${lebensmittelprodukt.mindesthaltbarkeitsdatum}"></th>
-        <th th:text="${lebensmittelprodukt.vegan}"></th>
-        <th th:text="${lebensmittelprodukt.vegetarisch}"></th>
-        <th th:text="${lebensmittelprodukt.tierisch}"></th>
-        <th th:text="${lebensmittelprodukt.glutenfrei}"></th>
-        <th th:text="${lebensmittelprodukt.laktosefrei}"></th>
-        <th th:text="${lebensmittelprodukt.zuckerfrei}"></th>
-        <th th:text="${lebensmittelprodukt.inhaltsstoffe}"></th>
+        <th class="Tabble" th:text="${lebensmittelprodukt.id}"></th>
+        <th class="Tabble" th:text="${lebensmittelprodukt.bezeichnung}"></th>
+        <th class="Tabble" th:text="${lebensmittelprodukt.preis}"></th>
+        <th class="Tabble" th:text="${lebensmittelprodukt.gewicht}"></th>
+        <th class="Tabble" th:text="${lebensmittelprodukt.hersteller}"></th>
+        <th class="Tabble" th:text="${lebensmittelprodukt.fertigungsTag}"></th>
+        <th class="Tabble" th:text="${lebensmittelprodukt.lagerungsTemperatur}"></th>
+        <th class="Tabble" th:text="${lebensmittelprodukt.mindesthaltbarkeitsdatum}"></th>
+        <th class="Tabble" th:text="${lebensmittelprodukt.vegan}"></th>
+        <th class="Tabble" th:text="${lebensmittelprodukt.vegetarisch}"></th>
+        <th class="Tabble" th:text="${lebensmittelprodukt.tierisch}"></th>
+        <th class="Tabble" th:text="${lebensmittelprodukt.glutenfrei}"></th>
+        <th class="Tabble" th:text="${lebensmittelprodukt.laktosefrei}"></th>
+        <th class="Tabble" th:text="${lebensmittelprodukt.zuckerfrei}"></th>
+        <th class="Tabble" th:text="${lebensmittelprodukt.inhaltsstoffe}"></th>
     </tr>
 </table>
 

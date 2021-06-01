@@ -6,6 +6,11 @@
     <title>Elektronikprodukte</title>
 </head>
 <body>
+<nav>
+    <a href="/">Dokumentation</a>
+    <a href="produkt.html">Alle Produkte</a>
+    <a href="lebensmittel.html">Alle Lebensmittelprodukte</a>
+</nav><br><br>
 <table>
     <tr>
         <th>ID</th>
@@ -25,21 +30,21 @@
         <th>anzahlSignalleuchten</th>
     </tr>
     <tr th:each="elektronikprodukt : ${alleElektronik}">
-        <th th:text="${elektronikprodukt.id}"></th>
-        <th th:text="${elektronikprodukt.bezeichnung}"></th>
-        <th th:text="${elektronikprodukt.preis}"></th>
-        <th th:text="${elektronikprodukt.gewicht}"></th>
-        <th th:text="${elektronikprodukt.hersteller}"></th>
-        <th th:text="${elektronikprodukt.fertigungsTag}"></th>
-        <th th:text="${elektronikprodukt.lagerungsTemperatur}"></th>
-        <th th:text="${elektronikprodukt.schutzklasse}"></th>
-        <th th:text="${elektronikprodukt.stromverbrauch}"></th>
-        <th th:text="${elektronikprodukt.leistung}"></th>
-        <th th:text="${elektronikprodukt.anschlussart}"></th>
-        <th th:text="${elektronikprodukt.garantieZeit}"></th>
-        <th th:text="${elektronikprodukt.hatSchalter}"></th>
-        <th th:text="${elektronikprodukt.netzwerkfaehig}"></th>
-        <th th:text="${elektronikprodukt.anzahlSignalleuchten}"></th>
+        <th class="Tabble" th:text="${elektronikprodukt.id}"></th>
+        <th class="Tabble" th:text="${elektronikprodukt.bezeichnung}"></th>
+        <th class="Tabble" th:text="${elektronikprodukt.preis}"></th>
+        <th class="Tabble" th:text="${elektronikprodukt.gewicht}"></th>
+        <th class="Tabble" th:text="${elektronikprodukt.hersteller}"></th>
+        <th class="Tabble" th:text="${elektronikprodukt.fertigungsTag}"></th>
+        <th class="Tabble" th:text="${elektronikprodukt.lagerungsTemperatur}"></th>
+        <th class="Tabble" th:text="${elektronikprodukt.schutzklasse}"></th>
+        <th class="Tabble" th:text="${elektronikprodukt.stromverbrauch}"></th>
+        <th class="Tabble" th:text="${elektronikprodukt.leistung}"></th>
+        <th class="Tabble" th:text="${elektronikprodukt.anschlussart}"></th>
+        <th class="Tabble" th:text="${elektronikprodukt.garantieZeit}"></th>
+        <th class="Tabble" th:text="${elektronikprodukt.hatSchalter}"></th>
+        <th class="Tabble" th:text="${elektronikprodukt.netzwerkfaehig}"></th>
+        <th class="Tabble" th:text="${elektronikprodukt.anzahlSignalleuchten}"></th>
     </tr>
 </table>
 </body>
