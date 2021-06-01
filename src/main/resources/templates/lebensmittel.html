@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Lebensmittelprodukte</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Bezeichnung</th>
+        <th>Preis</th>
+        <th>Gewicht</th>
+        <th>Hersteller</th>
+        <th>Fertigungs Tag</th>
+        <th>Lagerungs Temperatur</th>
+        <th>mindesthaltbarkeitsdatum</th>
+        <th>vegan</th>
+        <th>vegetarisch</th>
+        <th>tierisch</th>
+        <th>glutenfrei</th>
+        <th>laktosefrei</th>
+        <th>zuckerfrei</th>
+        <th>inhaltsstoffe</th>
+    </tr>
+    <tr th:each="lebensmittelprodukt : ${alleLebensmittel}">
+        <th th:text="${lebensmittelprodukt.id}"></th>
+        <th th:text="${lebensmittelprodukt.bezeichnung}"></th>
+        <th th:text="${lebensmittelprodukt.preis}"></th>
+        <th th:text="${lebensmittelprodukt.gewicht}"></th>
+        <th th:text="${lebensmittelprodukt.hersteller}"></th>
+        <th th:text="${lebensmittelprodukt.fertigungsTag}"></th>
+        <th th:text="${lebensmittelprodukt.lagerungsTemperatur}"></th>
+        <th th:text="${lebensmittelprodukt.mindesthaltbarkeitsdatum}"></th>
+        <th th:text="${lebensmittelprodukt.vegan}"></th>
+        <th th:text="${lebensmittelprodukt.vegetarisch}"></th>
+        <th th:text="${lebensmittelprodukt.tierisch}"></th>
+        <th th:text="${lebensmittelprodukt.glutenfrei}"></th>
+        <th th:text="${lebensmittelprodukt.laktosefrei}"></th>
+        <th th:text="${lebensmittelprodukt.zuckerfrei}"></th>
+        <th th:text="${lebensmittelprodukt.inhaltsstoffe}"></th>
+    </tr>
+</table>
+
+</body>
+</html>

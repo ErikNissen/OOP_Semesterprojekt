@@ -1,0 +1,30 @@
+table{
+    width: 100%;
+}
+table, th{
+    border: 1px solid black;
+    background: #338796;
+    text-align: center;
+}
+.Tabble{
+    font-weight: normal;
+}
+
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+nav a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: #111111;
+}

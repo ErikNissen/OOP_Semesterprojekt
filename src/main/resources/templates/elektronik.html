@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Elektronikprodukte</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Bezeichnung</th>
+        <th>Preis</th>
+        <th>Gewicht</th>
+        <th>Hersteller</th>
+        <th>Fertigungs Tag</th>
+        <th>Lagerungs Temperatur</th>
+        <th>schutzklasse</th>
+        <th>stromverbrauch</th>
+        <th>leistung</th>
+        <th>anschlussart</th>
+        <th>garantieZeit</th>
+        <th>hatSchalter</th>
+        <th>netzwerkfaehig</th>
+        <th>anzahlSignalleuchten</th>
+    </tr>
+    <tr th:each="elektronikprodukt : ${elektronikprodukt}">
+        <th th:text="${elektronikprodukt.id}"></th>
+        <th th:text="${elektronikprodukt.bezeichnung}"></th>
+        <th th:text="${elektronikprodukt.preis}"></th>
+        <th th:text="${elektronikprodukt.gewicht}"></th>
+        <th th:text="${elektronikprodukt.hersteller}"></th>
+        <th th:text="${elektronikprodukt.fertigungsTag}"></th>
+        <th th:text="${elektronikprodukt.lagerungsTemperatur}"></th>
+        <th th:text="${elektronikprodukt.schutzklasse}"></th>
+        <th th:text="${elektronikprodukt.stromverbrauch}"></th>
+        <th th:text="${elektronikprodukt.leistung}"></th>
+        <th th:text="${elektronikprodukt.anschlussart}"></th>
+        <th th:text="${elektronikprodukt.garantieZeit}"></th>
+        <th th:text="${elektronikprodukt.hatSchalter}"></th>
+        <th th:text="${elektronikprodukt.netzwerkfaehig}"></th>
+        <th th:text="${elektronikprodukt.anzahlSignalleuchten}"></th>
+    </tr>
+</table>
+</body>
+</html>
