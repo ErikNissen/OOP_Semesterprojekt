@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-public class ElektronikproduktWEBController {
+public class WEBElektronikproduktController {
 
     @Autowired
     ElektronikproduktService elektronikproduktService;

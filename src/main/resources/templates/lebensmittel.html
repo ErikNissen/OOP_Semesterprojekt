@@ -18,16 +18,16 @@
         <th>Preis</th>
         <th>Gewicht</th>
         <th>Hersteller</th>
-        <th>Fertigungs Tag</th>
-        <th>Lagerungs Temperatur</th>
-        <th>mindesthaltbarkeitsdatum</th>
-        <th>vegan</th>
-        <th>vegetarisch</th>
-        <th>tierisch</th>
-        <th>glutenfrei</th>
-        <th>laktosefrei</th>
-        <th>zuckerfrei</th>
-        <th>inhaltsstoffe</th>
+        <th>Fertigungstag</th>
+        <th>Lagerungstemperatur</th>
+        <th>Mindesthaltbarkeitsdatum</th>
+        <th>Vegan</th>
+        <th>Vegetarisch</th>
+        <th>Tierisch</th>
+        <th>Glutenfrei</th>
+        <th>Laktosefrei</th>
+        <th>Uuckerfrei</th>
+        <th>Inhaltsstoffe</th>
     </tr>
     <tr th:each="lebensmittelprodukt : ${alleLebensmittel}">
         <th class="Tabble" th:text="${lebensmittelprodukt.id}"></th>
@@ -44,7 +44,8 @@
         <th class="Tabble" th:text="${lebensmittelprodukt.glutenfrei}"></th>
         <th class="Tabble" th:text="${lebensmittelprodukt.laktosefrei}"></th>
         <th class="Tabble" th:text="${lebensmittelprodukt.zuckerfrei}"></th>
-        <th class="Tabble" th:text="${lebensmittelprodukt.inhaltsstoffe}"></th>
+        <--Inhaltsstoffe funktionieren nicht-/>
+        <th class="Tabble" th:each="inhalt ${lebensmittelprodukt.inhaltsstoffe}" ></th>
     </tr>
 </table>
 

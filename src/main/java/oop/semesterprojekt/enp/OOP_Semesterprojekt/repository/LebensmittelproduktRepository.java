@@ -7,5 +7,4 @@ public interface LebensmittelproduktRepository extends JpaRepository<Lebensmitte
 
     Lebensmittelprodukt findByBezeichnung(String bezeichnung);
 
-
 }
