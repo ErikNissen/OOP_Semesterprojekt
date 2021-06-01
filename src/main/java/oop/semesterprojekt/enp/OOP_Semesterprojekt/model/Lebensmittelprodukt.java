@@ -2,16 +2,16 @@ package oop.semesterprojekt.enp.OOP_Semesterprojekt.model;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 public class Lebensmittelprodukt extends Produkt {
 
-    @DateTimeFormat(pattern="yyy-MM-dd")
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     @Column
-    private Date mindeshaltbarkeitsdatum;
+    @Temporal(TemporalType.DATE)
+    private Date mindesthaltbarkeitsdatum;
 
     @Column
     private boolean vegan;
@@ -34,18 +34,18 @@ public class Lebensmittelprodukt extends Produkt {
     @Column
     private String[] inhaltsstoffe;
 
-    public Date getMindeshaltbarkeitsdatum() {
+    public Date getMindesthaltbarkeitsdatum() {
 
-        return mindeshaltbarkeitsdatum;
+        return mindesthaltbarkeitsdatum;
     }
 
     /**
      *
-     * @param mindeshaltbarkeitsdatum
+     * @param mindesthaltbarkeitsdatum
      */
-    public void setMindeshaltbarkeitsdatum(Date mindeshaltbarkeitsdatum) {
+    public void setMindesthaltbarkeitsdatum(Date mindesthaltbarkeitsdatum) {
 
-        this.mindeshaltbarkeitsdatum = mindeshaltbarkeitsdatum;
+        this.mindesthaltbarkeitsdatum = mindesthaltbarkeitsdatum;
     }
 
     public boolean isVegan() {

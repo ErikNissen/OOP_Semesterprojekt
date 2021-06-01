@@ -4,6 +4,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import java.util.Date;
 
 @Entity
@@ -21,17 +23,18 @@ public class Elektronikprodukt extends Produkt {
     @Column
     private String anschlussart;
 
-    @DateTimeFormat(pattern="yyy-MM-dd")
-    @Column
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    @Column( name = "garantieZeit")
+    @Temporal(TemporalType.DATE)
     private Date garantieZeit;
 
-    @Column
+    @Column( name = "hatSchalter")
     private boolean hatSchalter;
 
     @Column
     private boolean netzwerkfaehig;
 
-    @Column
+    @Column( name = "anzahlSignalleuchten")
     private int anzahlSignalleuchten;
 
     public String getSchutzklasse() {

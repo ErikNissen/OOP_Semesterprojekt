@@ -1,6 +1,5 @@
 package oop.semesterprojekt.enp.OOP_Semesterprojekt.service;
 
-import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,10 +21,7 @@ public class ElektronikproduktService {
     // READ: alle Elektronikprodukte werden ausgegeben
     public List<Elektronikprodukt> getAllElektronik() {
 
-        List<Elektronikprodukt> elektronikprodukte = new ArrayList<Elektronikprodukt>();
-        elektronikproduktRepository.findAll().forEach(elektronikprodukt -> elektronikprodukte.add(elektronikprodukt));
-
-        return elektronikprodukte;
+        return elektronikproduktRepository.findAll();
     }
 
     // READ: ein Elektronikprodukt wird ausgegeben; id einmalig

@@ -1,6 +1,5 @@
 package oop.semesterprojekt.enp.OOP_Semesterprojekt.service;
 
-import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,10 +20,7 @@ public class LebensmittelproduktService {
     // READ: alle Lebensmittelprodukte werden ausgegeben
     public List<Lebensmittelprodukt> getAllLebensmittelprodukt() {
 
-        List<Lebensmittelprodukt> lebensmittelprodukte = new ArrayList<Lebensmittelprodukt>();
-        lebensmittelproduktRepository.findAll().forEach(lebensmittelprodukt -> lebensmittelprodukte.add(lebensmittelprodukt));
-
-        return lebensmittelprodukte;
+        return lebensmittelproduktRepository.findAll();
     }
 
     // READ: ein Lebensmittelprodukt wird ausgegeben; id einmalig

@@ -1,6 +1,5 @@
 package oop.semesterprojekt.enp.OOP_Semesterprojekt.service;
 
-import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,12 +19,13 @@ public class ProduktService {
     }
 
     // READ: alle Produkte werden ausgegeben
+
+    /**
+     * @return findAll() gibt eine Liste zurück
+     */
     public List<Produkt> getAllProdukt() {
 
-        List<Produkt> produkte = new ArrayList<Produkt>();
-        produktRepository.findAll().forEach(produkt -> produkte.add(produkt));
-
-        return produkte;
+        return produktRepository.findAll();
     }
 
     // READ: ein Produkt wird ausgegeben; id einmalig

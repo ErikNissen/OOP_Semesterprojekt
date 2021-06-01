@@ -19,10 +19,11 @@ import java.util.Date;
  */
 @Entity // Definiert die Klasse als JPA-Entitäts-Klasse. Dadurch kann die Klasse z.B. via Hibernate zu einer Datenbank gemapped werden
 @Table( name = "Produkt") // optionale Annotation. Der Tabellenname wird dem Entitäts-Klassen-Namen entnommen
+@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS) // Damit wird für jede (erbende) Klasse eine eigene Tabelle angelegt
 public class Produkt {
 
     @Id // nach Entity die zweite Pflicht-Annotation. Die Id-Annotation spezifiziert den Primärschlüssel der Entität
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // optionale Annotation. Spezifiziert wie Werte für den Primärschlüssel generiert werden. Es gibt vier "id-generation-strategies"
+    @GeneratedValue(strategy = GenerationType.AUTO) // optionale Annotation. Spezifiziert wie Werte für den Primärschlüssel generiert werden. Es gibt vier "id-generation-strategies"
     @Column( unique = true) // optionale Annotation. Hier erfolgt das Mapping zwischen einem Attribut einer Entität und einer Datenbank-Tabellen-Spalte. Es können Einstellungen wie name, length, nullable und unique vorgenommen werden
     private int id;
 
@@ -40,9 +41,10 @@ public class Produkt {
 
     @DateTimeFormat(pattern="yyyy-MM-dd")
     @Column
+    @Temporal(TemporalType.DATE)
     private Date fertigungsTag;
 
-    @Column
+    @Column( name = "lagerungsTemperatur")
     private double lagerungsTemperatur;
 
     public int getId() {
