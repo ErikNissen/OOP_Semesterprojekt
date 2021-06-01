@@ -24,7 +24,7 @@
         <th>netzwerkfaehig</th>
         <th>anzahlSignalleuchten</th>
     </tr>
-    <tr th:each="elektronikprodukt : ${elektronikprodukt}">
+    <tr th:each="elektronikprodukt : ${alleElektronik}">
         <th th:text="${elektronikprodukt.id}"></th>
         <th th:text="${elektronikprodukt.bezeichnung}"></th>
         <th th:text="${elektronikprodukt.preis}"></th>
