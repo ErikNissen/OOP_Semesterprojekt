@@ -20,13 +20,13 @@
                 <th>Lagerungs Temperatur</th>
             </tr>
             <tr th:each="produkt : ${alleProdukte}">
-                <th th:text="${produkt.id}"></th>
-                <th th:text="${produkt.bezeichnung}"></th>
-                <th th:text="${produkt.preis}"></th>
-                <th th:text="${produkt.gewicht}"></th>
-                <th th:text="${produkt.hersteller}"></th>
-                <th th:text="${produkt.fertigungsTag}"></th>
-                <th th:text="${produkt.lagerungsTemperatur}"></th>
+                <th class = "Tabble" th:text="${produkt.id}"></th>
+                <th class = "Tabble" th:text="${produkt.bezeichnung}"></th>
+                <th class = "Tabble" th:text="${produkt.preis}"></th>
+                <th class = "Tabble" th:text="${produkt.gewicht}"></th>
+                <th class = "Tabble" th:text="${produkt.hersteller}"></th>
+                <th class = "Tabble" th:text="${produkt.fertigungsTag}"></th>
+                <th class = "Tabble" th:text="${produkt.lagerungsTemperatur}"></th>
             </tr>
         </table>
     </body>
