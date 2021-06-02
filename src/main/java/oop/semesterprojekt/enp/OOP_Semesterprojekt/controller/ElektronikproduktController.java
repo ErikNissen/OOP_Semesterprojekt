@@ -27,7 +27,7 @@ public class ElektronikproduktController {
         if(bezeichnung == null) {
             return elektronikproduktService.getAllElektronik();
         } else {
-            return List.of(elektronikproduktService.getElektronikproduktByName(bezeichnung));
+            return elektronikproduktService.getElektronikproduktByName(bezeichnung);
         }
     }
 

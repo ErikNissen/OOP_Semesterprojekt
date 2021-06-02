@@ -1,6 +1,7 @@
 package oop.semesterprojekt.enp.OOP_Semesterprojekt.service;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import oop.semesterprojekt.enp.OOP_Semesterprojekt.model.Lebensmittelprodukt;
@@ -29,7 +30,7 @@ public class LebensmittelproduktService {
     }
 
     // READ: ein oder mehrere Lebensmittelprodukte mit der gesuchten Bezeichnung werden ausgesucht
-    public Lebensmittelprodukt getLebensmittelproduktByName(String name) {
+    public List<Lebensmittelprodukt> getLebensmittelproduktByName(String name) {
 
         return lebensmittelproduktRepository.findByBezeichnung(name);
     }

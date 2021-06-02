@@ -31,7 +31,7 @@ public class ElektronikproduktService {
     }
 
     // READ: ein oder mehrere Produkte mit der gesuchten Bezeichnung werden ausgegeben
-    public Elektronikprodukt getElektronikproduktByName(String name) {
+    public List<Elektronikprodukt> getElektronikproduktByName(String name) {
 
         return elektronikproduktRepository.findByBezeichnung(name);
     }
