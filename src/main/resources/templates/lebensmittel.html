@@ -26,7 +26,7 @@
         <th>Tierisch</th>
         <th>Glutenfrei</th>
         <th>Laktosefrei</th>
-        <th>Uuckerfrei</th>
+        <th>Zuckerfrei</th>
         <th>Inhaltsstoffe</th>
     </tr>
     <tr th:each="lebensmittelprodukt : ${alleLebensmittel}">
@@ -44,10 +44,7 @@
         <th class="Tabble" th:text="${lebensmittelprodukt.glutenfrei}"></th>
         <th class="Tabble" th:text="${lebensmittelprodukt.laktosefrei}"></th>
         <th class="Tabble" th:text="${lebensmittelprodukt.zuckerfrei}"></th>
-        <th class="Tabble">In process...</th>
-        <!--Inhaltsstoffe funktionieren nicht
-        <th class="Tabble" th:each="inhalt ${lebensmittelprodukt.inhaltsstoffe}" ></th>
-        -->
+        <th class="Tabble" th:text="${#lists.sort(lebensmittelprodukt.inhaltsstoffe)}"></th>
     </tr>
 </table>
 
