@@ -27,7 +27,7 @@ public class ProduktController {
         if(bezeichnung == null) {
             return produktService.getAllProdukt();
         } else {
-            return List.of(produktService.getProduktByName(bezeichnung));
+            return produktService.getProduktByName(bezeichnung);
         }
     }
 
