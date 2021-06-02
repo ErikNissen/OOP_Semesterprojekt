@@ -1,9 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+:root {
+    --dunkelgruen:  #1F5904;
+    --gruen:        #3F8C08;
+    --hellgruen:    #68BF11;
+    --grau:         #8C7974;
+    --hellschwarz:  #0D0D0D;
+}
+body {
+    background: var(--hellschwarz);
+}
+* {
+    font-family: 'Merriweather', serif;
+    color: var(--hellgruen);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Righteous', cursive;
+    color: var(--dunkelgruen);
+}
+
 table{
     width: 100%;
 }
 table, th{
-    border: 1px solid black;
-    background: #338796;
+    border: 1px solid var(--hellschwarz);
+    background: var(--dunkelgruen);
     text-align: center;
 }
 .Tabble{
@@ -15,16 +37,15 @@ nav {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333333;
+    background-color: var(--grau);
 }
 nav a{
     float: left;
     display: block;
-    color: white;
     text-align: center;
     padding: 16px;
     text-decoration: none;
 }
 nav a:hover {
-    background-color: #111111;
+    background-color: var(--hellschwarz);
 }

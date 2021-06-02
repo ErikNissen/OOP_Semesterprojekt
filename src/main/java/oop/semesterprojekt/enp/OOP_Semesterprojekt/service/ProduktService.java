@@ -35,7 +35,7 @@ public class ProduktService {
     }
 
     // READ: ein oder mehrere Produkte mit der gesuchten Bezeichnung werden ausgegeben
-    public Produkt getProduktByName(String name) {
+    public List<Produkt> getProduktByName(String name) {
 
         return produktRepository.findByBezeichnung(name);
     }

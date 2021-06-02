@@ -18,7 +18,7 @@ public class ProduktController {
 
         return produktService.saveOrUpdateProdukt(produkt).getId();
 
-    }
+    } // Die Anwendung kann noch nicht mit Umlauten im HTTP-Request-Body umgehen
 
     // READ
     @GetMapping("/produkt")
@@ -27,7 +27,7 @@ public class ProduktController {
         if(bezeichnung == null) {
             return produktService.getAllProdukt();
         } else {
-            return List.of(produktService.getProduktByName(bezeichnung));
+            return produktService.getProduktByName(bezeichnung);
         }
     }
 

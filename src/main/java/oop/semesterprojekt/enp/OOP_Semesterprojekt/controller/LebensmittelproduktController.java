@@ -27,10 +27,8 @@ public class LebensmittelproduktController {
         if(bezeichnung == null) {
             return lebensmittelproduktService.getAllLebensmittelprodukt();
         } else {
-
+            return lebensmittelproduktService.getLebensmittelproduktByName(bezeichnung);
         }
-
-        return lebensmittelproduktService.getAllLebensmittelprodukt();
     }
 
     // READ

@@ -32,7 +32,7 @@ public class Objektdatenbank {
      * @return In "response" steht die ID des angelegten Produkts.
      *
      * Wird verwendet in Anwendung.java
-     * Mit "final String produktId = objektdatenbank.erstelleProdukt("http://localhost:8080/produkt");" wird eine
+     * Mit "final String produktId = objektdatenbank.erstelleProdukt("http://localhost:8080/produkt");" in Anwendung.java wird eine
      * Produkt-ID gespeichert, um die über diese ID identifizierten Objekte auszulesen, zu aktualisieren oder zu löschen
      */
     public String erstelleProdukt( final String url ) {
@@ -53,7 +53,7 @@ public class Objektdatenbank {
         System.out.println("### CREATE: Es wird ein generisches Produkt angelegt");
         System.out.println("...");
         final String response = restTemplate.postForObject(url, entity, String.class);
-        System.out.println("Ein Produkt wurde erfolgreich angelegt");
+        System.out.println("Das Testprodukt " + entity.getBody() + " wurde erfolgreich angelegt.");
 
         return response;
     }
@@ -85,7 +85,7 @@ public class Objektdatenbank {
         System.out.println("### CREATE: Es wird ein Lebensmittelprodukt angelegt");
         System.out.println("...");
         final String response = restTemplate.postForObject(url, entity, String.class);
-        System.out.println("Ein Lebensmittelprodukt wurde erfolgreich angelegt");
+        System.out.println("Das Lebensmittelprodukt " + entity.getBody() + " wurde erfolgreich angelegt.");
 
         return response;
 
@@ -118,7 +118,7 @@ public class Objektdatenbank {
         System.out.println("### CREATE: Es wird ein Elektronikprodukt angelegt");
         System.out.println("...");
         final String response = restTemplate.postForObject(url, entity, String.class);
-        System.out.println("Ein Elektronikprodukt wurde erfolgreich angelegt");
+        System.out.println("Das Elektronikprodukt " + entity.getBody() + " wurde erfolgreich angelegt.");
 
         return response;
 
@@ -135,8 +135,7 @@ public class Objektdatenbank {
         System.out.println();
         System.out.println("### READ: Es wird ein generisches Produkt ausgelesen");
         System.out.println("...");
-        System.out.println(restTemplate.getForObject("http://localhost:8080/produkt/" + produktId, String.class));
-        System.out.println("Ein Produkt wurde erfolgreich ausgelesen");
+        System.out.println("Das Produkt " + restTemplate.getForObject("http://localhost:8080/produkt/" + produktId, String.class) + " wurde erfolgreich ausgelesen.");
 
     }
 
@@ -148,8 +147,7 @@ public class Objektdatenbank {
         System.out.println();
         System.out.println("### READ: Es wird ein Lebensmittelprodukt ausgelesen");
         System.out.println("...");
-        System.out.println(restTemplate.getForObject("http://localhost:8080/lebensmittel/" + lebensmittelproduktId, String.class));
-        System.out.println("Ein Lebensmittelprodukt wurde erfolgreich ausgelesen");
+        System.out.println("Das Lebensmittelprodukt " + restTemplate.getForObject("http://localhost:8080/lebensmittel/" + lebensmittelproduktId, String.class) + " wurde erfolgreich ausgelesen.");
 
     }
 
@@ -161,8 +159,7 @@ public class Objektdatenbank {
         System.out.println();
         System.out.println("### READ: Es wird ein Elektronikprodukt ausgelesen");
         System.out.println("...");
-        System.out.println(restTemplate.getForObject("http://localhost:8080/elektronik/" + elektronikproduktId, String.class));
-        System.out.println("Ein Elektronikprodukt wurde erfolgreich ausgelesen");
+        System.out.println("Das Elektronikprodukt " + restTemplate.getForObject("http://localhost:8080/elektronik/" + elektronikproduktId, String.class) + " wurde erfolgreich ausgelesen.");
 
     }
 
@@ -190,8 +187,7 @@ public class Objektdatenbank {
         System.out.println();
         System.out.println("### UPDATE: Die Bezeichnung des Produkts wird aktualisiert. Das aktualisierte Produkt wird ausgegeben.");
         System.out.println("...");
-        System.out.println(restTemplate.getForObject("http://localhost:8080/produkt/" + produktId, String.class));
-        System.out.println("Das Produkt wurde erfolgreich aktualisiert.");
+        System.out.println("Das Produkt " + restTemplate.getForObject("http://localhost:8080/produkt/" + produktId, String.class) + " wurde erfolgreich aktualisiert.");
 
     }
 
@@ -225,8 +221,7 @@ public class Objektdatenbank {
         System.out.println();
         System.out.println("### UPDATE: Die Bezeichnung des Lebensmittelprodukts wird aktualisiert. Das aktualisierte Lebensmittelprodukt wird ausgegeben.");
         System.out.println("...");
-        System.out.println(restTemplate.getForObject("http://localhost:8080/lebensmittel/" + lebensmittelproduktId, String.class));
-        System.out.println("Das Lebensmittelprodukt wurde erfolgreich aktualisiert.");
+        System.out.println("Das Lebensmittelprodukt " + restTemplate.getForObject("http://localhost:8080/lebensmittel/" + lebensmittelproduktId, String.class) + " wurde erfolgreich aktualisiert.");
 
     }
 
@@ -260,8 +255,7 @@ public class Objektdatenbank {
         System.out.println();
         System.out.println("### UPDATE: Die Bezeichnung des Elektronikprodukts wird aktualisiert. Das aktualisierte Elektronikprodukt wird ausgegeben.");
         System.out.println("...");
-        System.out.println(restTemplate.getForObject("http://localhost:8080/elektronik/" + elektronikproduktId, String.class));
-        System.out.println("Das Elektronikprodukt wurde erfolgreich aktualisiert.");
+        System.out.println("Das Elektronikprodukt " + restTemplate.getForObject("http://localhost:8080/elektronik/" + elektronikproduktId, String.class) + " wurde erfolgreich aktualisiert.");
 
     }
 
@@ -276,6 +270,7 @@ public class Objektdatenbank {
         System.out.println();
         System.out.println("### DELETE: Es wird ein Produkt geloescht.");
         System.out.println("...");
+        System.out.println("Das Produkt " + restTemplate.getForObject("http://localhost:8080/produkt/" + produktId, String.class) + " wird geloescht");
         restTemplate.delete("http://localhost:8080/produkt/" + produktId);
         System.out.println("Das Produkt wurde erfolgreich geloescht.");
 
@@ -289,6 +284,7 @@ public class Objektdatenbank {
         System.out.println();
         System.out.println("### DELETE: Es wird ein Lebensmittelprodukt geloescht.");
         System.out.println("...");
+        System.out.println("Das Produkt " + restTemplate.getForObject("http://localhost:8080/lebensmittel/" + lebensmittelproduktId, String.class) + " wird geloescht");
         restTemplate.delete("http://localhost:8080/lebensmittel/" + lebensmittelproduktId);
         System.out.println("Das Lebensmittelprodukt wurde erfolgreich geloescht.");
 
@@ -302,6 +298,7 @@ public class Objektdatenbank {
         System.out.println();
         System.out.println("### DELETE: Es wird ein Elektronikprodukt geloescht.");
         System.out.println("...");
+        System.out.println("Das Produkt " + restTemplate.getForObject("http://localhost:8080/elektronik/" + elektronikproduktId, String.class) + " wird gelöscht");
         restTemplate.delete("http://localhost:8080/elektronik/" + elektronikproduktId);
         System.out.println("Das Produkt wurde erfolgreich geloescht.");
 
