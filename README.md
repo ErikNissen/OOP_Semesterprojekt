@@ -12,33 +12,33 @@ Objektorientierte Programmierung (in Java)
 
 [Schnellstart-Guide 2](#Schnellstart-Guide)
 
-[Vor dem ersten Start 2](#Vor dem ersten Start)
+[Vor dem ersten Start 2](#Vor-dem-ersten-Start)
 
-[Die Anwendung das erste Mal starten 2](#Die Anwendung das erste Mal starten)
+[Die Anwendung das erste Mal starten 2](#Die-Anwendung-das-erste-Mal-starten)
 
-[Architektur 3](#_Toc73537181)
+[Architektur 3](#Architektur)
 
-[Klassendiagramm nach UML-Standard 3](#_Toc73537182)
+[Klassendiagramm nach UML-Standard 3](#Klassendiagramm-nach-UML-Standard)
 
-[Software-Design-Pattern: MVC-Design-Pattern 4](#_Toc73537183)
+[Software-Design-Pattern: MVC-Design-Pattern 4](#Software-Design-Pattern:-MVC-Design-Pattern)
 
-[Abbildung der CRUD-Operationen 4](#_Toc73537184)
+[Abbildung der CRUD-Operationen 4](#Abbildung-der-CRUD-Operationen)
 
-[Persistenz der Datenbank 4](#_Toc73537185)
+[Persistenz der Datenbank 4](#Persistenz-der-Datenbank)
 
-[Anwendungsdetails 5](#_Toc73537186)
+[Anwendungsdetails 5](#Anwendungsdetails)
 
-[Ein Produkt anlegen (CREATE) 5](#_Toc73537187)
+[Ein Produkt anlegen (CREATE) 5](#Ein-Produkt-anlegen-(CREATE))
 
-[Werte eines Produkts auslesen (READ) 6](#_Toc73537188)
+[Werte eines Produkts auslesen (READ) 6](#Werte-eines-Produkts-auslesen-(READ))
 
-[Nach einer Produkt-ID suchen 6](#_Toc73537189)
+[Nach einer Produkt-ID suchen 6](#Nach-einer-Produkt-ID-suchen)
 
-[Nach einer Produkt-Bezeichnung suchen 6](#_Toc73537190)
+[Nach einer Produkt-Bezeichnung suchen 6](#Nach-einer-Produkt-Bezeichnung-suchen)
 
-[Einen bestehenden Produkteintrag aktualisieren (UPDATE) 7](#_Toc73537191)
+[Einen bestehenden Produkteintrag aktualisieren (UPDATE) 7](#Einen-bestehenden-Produkteintrag-aktualisieren-(UPDATE))
 
-[Einen Produkteintrag löschen (DELETE) 7](#_Toc73537192)
+[Einen Produkteintrag löschen (DELETE) 7](#Einen-Produkteintrag-löschen-(DELETE))
 
 # Einleitung
 
