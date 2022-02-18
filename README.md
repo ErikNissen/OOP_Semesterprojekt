@@ -1,5 +1,3 @@
-![Shape3](RackMultipart20220218-4-timj18_html_867c412906dc3c39.gif) ![Shape2](RackMultipart20220218-4-timj18_html_8a156dc140bb84cc.gif) ![Shape1](RackMultipart20220218-4-timj18_html_f9fcc004f9b7ceb.gif)
-
 # OOP-Semesterprojekt
 
 Erik Nissen, Nico Johnsen, Pascal Groß
