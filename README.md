@@ -124,7 +124,7 @@ Beim Aufbau der HTTP-Anfragen muss das JSON-Format eingehalten werden, der Reque
 
 _Die folgende Windows-PowerShell-Eingabe kann markiert, kopiert und mit STRG + SHIFT + V in die Windows PowerShell eingefügt werden_.
 ```powershell
-Invoke-WebRequest -UseBasicParsing http://localhost:8080/produkt -ContentType &quot;application/json&quot; -Method POST -Body &#39;{&quot;bezeichnung&quot;:&quot;erstes Produkt&quot;, &quot;preis&quot;:&quot;123.456&quot;, &quot;gewicht&quot;:&quot;789.101&quot;, &quot;hersteller&quot;:&quot;Dokumentation&quot;, &quot;fertigungsTag&quot;:&quot;2021-05-29&quot;, &quot;lagerungsTemperatur&quot;:&quot;20.21&quot;}&#39;
+Invoke-WebRequest -UseBasicParsing http://localhost:8080/produkt -ContentType "application/json" -Method POST -Body '{"bezeichnung":"erstes Produkt", "preis":"123.456", "gewicht":"789.101", "hersteller":"Dokumentation", "fertigungsTag":"2021-05-29", "lagerungsTemperatur":"20.21"}'
 ```
 ## Werte eines Produkts auslesen (READ)
 
@@ -164,7 +164,7 @@ Gegeben sei ein Produkt, welches angelegt wurde nach Anleitung im Abschnitt [Ein
 
 _Die folgende Windows-PowerShell-Eingabe kann markiert, kopiert und mit STRG + SHIFT + V in die Windows PowerShell eingefügt werden_.
 ```powershell
-Invoke-WebRequest -UseBasicParsing http://localhost:8080/produkt -ContentType &quot;application/json&quot; -Method POST -Body &#39;{&quot;id&quot;:&quot;821&quot;, &quot;bezeichnung&quot;:&quot;aktualisiertes Produkt&quot;, &quot;preis&quot;:&quot;111.222&quot;, &quot;gewicht&quot;:&quot;333.444&quot;, &quot;hersteller&quot;:&quot;Dokumentation&quot;, &quot;fertigungsTag&quot;:&quot;2021-06-02&quot;, &quot;lagerungsTemperatur&quot;:&quot;20.21&quot; }&#39;
+Invoke-WebRequest -UseBasicParsing http://localhost:8080/produkt -ContentType "application/json" -Method POST -Body '{"bezeichnung":"erstes Produkt", "preis":"123.456", "gewicht":"789.101", "hersteller":"Dokumentation", "fertigungsTag":"2021-05-29", "lagerungsTemperatur":"20.21"}'
 ```
 Um das aktualisierte Produkt auszugeben, kann die folgende URL aufgerufen werden:
 
