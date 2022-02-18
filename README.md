@@ -123,9 +123,9 @@ Es wird angenommen, dass die Anwendung in den meisten Fällen auf Windows-System
 Beim Aufbau der HTTP-Anfragen muss das JSON-Format eingehalten werden, der Request-Body besteht demnach unter anderem aus &quot;attributname&quot;:&quot;attributwert&quot;. Die Attributnamen sind den Klassendiagrammen aus dem Abschnitt [Klassendiagramm nach UML-Standard](#_Klassendiagramm_nach_UML-Standard_1) zu entnehmen.
 
 _Die folgende Windows-PowerShell-Eingabe kann markiert, kopiert und mit STRG + SHIFT + V in die Windows PowerShell eingefügt werden_.
-
+```powershell
 Invoke-WebRequest -UseBasicParsing http://localhost:8080/produkt -ContentType &quot;application/json&quot; -Method POST -Body &#39;{&quot;bezeichnung&quot;:&quot;erstes Produkt&quot;, &quot;preis&quot;:&quot;123.456&quot;, &quot;gewicht&quot;:&quot;789.101&quot;, &quot;hersteller&quot;:&quot;Dokumentation&quot;, &quot;fertigungsTag&quot;:&quot;2021-05-29&quot;, &quot;lagerungsTemperatur&quot;:&quot;20.21&quot;}&#39;
-
+```
 ## Werte eines Produkts auslesen (READ)
 
 Alle Produkte werden ausgegeben mittels GET-Request an die Schnittstelle /produkt. Alle Lebensmittelprodukte werden ausgegeben mittels GET-Request an die Schnittstelle /lebensmittel. Alle Elektronikprodukte werden ausgegeben mittels GET-Request an die Schnittstelle /elektronik.
@@ -133,25 +133,25 @@ Alle Produkte werden ausgegeben mittels GET-Request an die Schnittstelle /produk
 Der Übersicht wegen wird im Folgenden die Funktionsweise am Beispiel der Schnittstelle /produkt demonstriert, die übrigen Schnittstellen funktionieren analog dazu.
 
 _Die folgende Windows-PowerShell-Eingabe kann markiert, kopiert und mit STRG + SHIFT + V in die Windows PowerShell eingefügt werden_.
-
+```powershell
 Invoke-WebRequest -UseBasicParsing http://localhost:8080/produkt
-
+```
 Alternativ kann die Weboberfläche für das Abrufen der Daten verwendet werden: [http://localhost:8080/produkt.html](http://localhost:8080/produkt.html)
 
 ### Nach einer Produkt-ID suchen
 
 _Die folgende Windows-PowerShell-Eingabe kann markiert, kopiert und mit STRG + SHIFT + V in die Windows PowerShell eingefügt werden_.
-
+```powershell
 Invoke-WebRequest -UseBasicParsing http://localhost:8080/produkt/4
-
+```
 Alternativ kann die Weboberfläche für das Abrufen der Daten, die eine bestimmte ID enthalten, verwendet werden: [http://localhost:8080/produkt/4](http://localhost:8080/produkt/4)
 
 ### Nach einer Produkt-Bezeichnung suchen
 
 _Die folgende Windows-PowerShell-Eingabe kann markiert, kopiert und mit STRG + SHIFT + V in die Windows PowerShell eingefügt werden_.
-
+```powershell
 Invoke-WebRequest -UseBasicParsing http://localhost:8080/produkt?bezeichnung=erstes%20Produkt
-
+```
 Alternativ kann die Weboberfläche verwendet werden, um die Produkttabelle nach einem Produkt mit einer bestimmten Bezeichnung zu durchsuchen: [http://localhost:8080/produkt?bezeichnung=erstes%20Produkt](http://localhost:8080/produkt?bezeichnung=erstes%20Produkt)
 
 Dabei ist der URL der Parameter ?bezeichnung= und ein zu suchender Wert anzufügen.
@@ -163,9 +163,9 @@ Um einen bestehenden Produkt-Eintrag zu aktualisieren, wird ein POST-Request an 
 Gegeben sei ein Produkt, welches angelegt wurde nach Anleitung im Abschnitt [Ein Produkt anlegen](#_Ein_Produkt_anlegen). Die ID sei 821. Dann wird der Eintrag mit folgendem Request aktualisiert:
 
 _Die folgende Windows-PowerShell-Eingabe kann markiert, kopiert und mit STRG + SHIFT + V in die Windows PowerShell eingefügt werden_.
-
+```powershell
 Invoke-WebRequest -UseBasicParsing http://localhost:8080/produkt -ContentType &quot;application/json&quot; -Method POST -Body &#39;{&quot;id&quot;:&quot;821&quot;, &quot;bezeichnung&quot;:&quot;aktualisiertes Produkt&quot;, &quot;preis&quot;:&quot;111.222&quot;, &quot;gewicht&quot;:&quot;333.444&quot;, &quot;hersteller&quot;:&quot;Dokumentation&quot;, &quot;fertigungsTag&quot;:&quot;2021-06-02&quot;, &quot;lagerungsTemperatur&quot;:&quot;20.21&quot; }&#39;
-
+```
 Um das aktualisierte Produkt auszugeben, kann die folgende URL aufgerufen werden:
 
 [http://localhost:8080/produkt?bezeichnung=aktualisiertes%20Produkt](http://localhost:8080/produkt?bezeichnung=aktualisiertes%20Produkt)
@@ -177,7 +177,7 @@ Das Löschen eines Produktes, Elektronik- oder Lebensmittelproduktes erfolgt üb
 Gegeben sei ein Produkt, welches angelegt wurde nach Anleitung im Abschnitt [Ein Produkt anlegen](#_Ein_Produkt_anlegen). Die ID sei 821. Dann wird der Eintrag mit folgendem Request gelöscht:
 
 _Die folgende Windows-PowerShell-Eingabe kann markiert, kopiert und mit STRG + SHIFT + V in die Windows PowerShell eingefügt werden_.
-
+```powershell
 Invoke-WebRequest -UseBasicParsing http://localhost:8080/produkt/821 -Method DELETE
-
+```
 Ein erneuter Aufruf von [http://localhost:8080/produkt?bezeichnung=aktualisiertes%20Produkt](http://localhost:8080/produkt?bezeichnung=aktualisiertes%20Produkt) zeigt, dass kein Produkt mit dieser ID mehr vorhanden ist.
