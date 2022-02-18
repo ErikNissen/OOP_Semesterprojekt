@@ -12,9 +12,9 @@ Objektorientierte Programmierung (in Java)
 
 [Schnellstart-Guide 2](#Schnellstart-Guide)
 
-[Vor dem ersten Start 2](#_Toc73537179)
+[Vor dem ersten Start 2](#Vor dem ersten Start)
 
-[Die Anwendung das erste Mal starten 2](#_Toc73537180)
+[Die Anwendung das erste Mal starten 2](#Die Anwendung das erste Mal starten)
 
 [Architektur 3](#_Toc73537181)
 
