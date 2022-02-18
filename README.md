@@ -20,7 +20,7 @@ Objektorientierte Programmierung (in Java)
 
 [Klassendiagramm nach UML-Standard 3](#Klassendiagramm-nach-UML-Standard)
 
-[Software-Design-Pattern: MVC-Design-Pattern 4](#Software-Design-Pattern:-MVC-Design-Pattern)
+[Software-Design-Pattern: MVC-Design-Pattern 4](#Software-Design-Pattern-MVC-Design-Pattern)
 
 [Abbildung der CRUD-Operationen 4](#Abbildung-der-CRUD-Operationen)
 
@@ -82,7 +82,7 @@ Vorgriff auf den folgenden Abschnitt [MVC-Design-Pattern](#_MVC-Design-Pattern):
 
 _Abbildung 1: Klassendiagramm nach dem UML-Standard_
 
-## Software-Design-Pattern: MVC-Design-Pattern
+## Software-Design-Pattern MVC-Design-Pattern
 
 Die Anwendung wurde strukturiert nach dem Model-View-Controller-Pattern, kurz: MVC-Pattern. Es gibt die im Abschnitt [Klassendiagramm nach UML-Standard](#_Klassendiagramm_nach_UML-Standard) vorgestellten Klassen Produkt, Lebensmittelprodukt und Elektronikprodukt, wobei die beiden zuletzt genannten aus der erstgenannten abgeleitet sind. Dabei enthalten diese drei Klassen ausschließlich Attribute, Getter und Setter. Die drei Klassen befinden sich im Package model.
 
