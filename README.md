@@ -8,9 +8,9 @@ Objektorientierte Programmierung (in Java)
 
 # Inhalt
 
-[Einleitung 2](#_Toc73537177)
+[Einleitung 2](#Einleitung)
 
-[Schnellstart-Guide 2](#_Toc73537178)
+[Schnellstart-Guide 2](#Schnellstart-Guide)
 
 [Vor dem ersten Start 2](#_Toc73537179)
 
